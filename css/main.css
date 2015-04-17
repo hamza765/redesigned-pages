@@ -1,0 +1,386 @@
+/* Helpers */
+
+.green {
+	color: #8CC152;
+}
+
+.white {
+	color: #F5F7FA;
+}
+
+.vparent {
+	display: table;
+	table-layout: fixed;
+}
+
+.vcparent {
+	display: table;
+	table-layout: fixed;
+	height: 100%;
+	margin: auto;
+}
+
+.vcparent .container {
+	margin: auto;
+}
+
+.vchild {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* Root Styles */
+
+body {
+	opacity: 1 !important;
+	min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif;
+}
+
+.container {
+	max-width: 992px;
+}
+
+/* Navigation */
+
+.nav {
+	height: 78px;
+	background: #282928;
+}
+
+#logo {
+	margin: 8px;
+}
+/* Home */
+
+.home:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: inherit;
+	content: ' ';
+}
+
+.home {
+	color: #F5F7FA;
+	background: url(./images/gplaypatterngrey.png);
+	background-repeat: repeat;
+	padding: 1rem;
+	height: calc(100% - 78px - 20rem);
+}
+
+.home h1,
+.home h2,
+.home h3 {
+	margin: 5px 10px;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+}
+
+.home h1 {
+	margin-top: 0;
+}
+
+.home .btn,
+.home ul {
+	margin: 10px;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+}
+
+.outhome {
+	height: 100%;
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.home .inhome {
+	background: #292929;
+	margin: 1.5rem;
+	padding: 1.5rem;
+	border-radius: 4rem;
+	border: 0.4rem #8CC152 solid;
+	overflow: hidden;
+	position: relative;
+	height: auto;
+}
+
+.home .inhome .sealParent {
+	padding: 0;
+}
+
+.home .inhome .seal {
+	margin-left: -33.33%;
+	width: 100%;
+	float: left;
+	padding: 2rem 0;
+	max-height: 250px;
+	/*position: absolute;*/
+}
+
+.home .inhome .text {
+	padding: 0;
+}
+
+/* What is SSL? */
+
+.whatisssl {
+	height: 20rem;
+}
+
+.whatisssl {
+	color: #fff;
+	background: url(./images/gplaypatternlightgrey.png);
+	background-repeat: repeat;
+}
+
+.whatisssl h1 {
+	font-size: 72px;
+	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.whatisssl h3 {
+	color: #000;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+	font-size: 29px;
+	margin-top: 0;
+}
+
+.whatisssl #video {
+	padding: 0;
+	border: 5px #555 solid;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 350px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.home {
+		height: calc(100% - 78px - 35rem);
+	}
+
+	.home h1 {
+		font-size: 64px;
+	}
+
+	.home h2 {
+		font-size: 54px;
+	}
+
+	.home h3 {
+		font-size: 36px;
+	}
+
+	.whatisssl {
+		height: 35rem;
+	}
+
+	.whatisssl h1 {
+		margin-top: 0;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.home {
+		height: calc(100% - 78px - 35rem);
+	}
+
+	.home h1 {
+		font-size: 64px;
+	}
+
+	.home h2 {
+		font-size: 54px;
+	}
+
+	.home h3 {
+		font-size: 36px;
+	}
+
+	.whatisssl {
+		height: 35rem;
+	}
+
+	.whatisssl h1 {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width : 605px) {
+	.home {
+		height: 54rem;
+		/*padding: 0;*/
+	}
+
+	.home .inhome {
+		height: auto;
+		border-radius: 1rem;
+		/*margin: 0;*/
+	}
+
+	.home h1 {
+		font-size: 58px;
+	}
+
+	.home h2 {
+		font-size: 44px;
+	}
+
+	.home h3 {
+		font-size: 36px;
+	}
+
+	.whatisssl {
+		height: 35rem;
+	}
+
+	.whatisssl h1 {
+		font-size: 64px;
+	}
+
+	.whatisssl h3 {
+		font-size: 26px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.home {
+		height: 51rem;
+		/*padding: 0;*/
+	}
+
+	.home .inhome {
+		height: auto;
+		border-radius: 1rem;
+		margin: 0;
+	}
+
+	.home h1 {
+		font-size: 51px;
+	}
+
+	.home h2 {
+		font-size: 43px;
+	}
+
+	.home h3 {
+		font-size: 30px;
+	}
+
+	.whatisssl {
+		height: 30rem;
+	}
+
+	.whatisssl h1 {
+		font-size: 64px;
+	}
+
+	.whatisssl h3 {
+		font-size: 26px;
+	}
+}
+
+/* Even smaller devices */
+
+@media only screen and (max-width: 400px){
+	.whatisssl h1 {
+		font-size: 58px;
+	}
+
+	.whatisssl h3 {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 380px){
+	.home {
+		height: 48rem;
+	}
+
+	.home h1 {
+		font-size: 48px;
+	}
+
+	.home h2 {
+		font-size: 36px;
+	}
+
+	.home h3 {
+		font-size: 28px;
+	}
+}
+
+@media only screen and (max-width: 365px){
+	.home {
+		height: 44rem;
+	}
+
+	.home h1 {
+		font-size: 42px;
+	}
+
+	.home h2 {
+		font-size: 32px;
+	}
+
+	.home h3 {
+		font-size: 24px;
+	}
+
+	.whatisssl {
+		height: 25rem;
+	}
+
+	.whatisssl h1 {
+		font-size: 52px;
+	}
+
+	.whatisssl h3 {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 329px){
+	.home {
+		height: 400px;
+	}
+
+	.home h1 {
+		font-size: 36px;
+	}
+
+	.home h2 {
+		font-size: 28px;
+	}
+
+	.home h3 {
+		font-size: 20px;
+	}
+
+	.whatisssl {
+		height: 24rem;
+	}
+
+	.whatisssl h1 {
+		font-size: 48px;
+	}
+
+}
