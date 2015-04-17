@@ -72,7 +72,7 @@ h5 {
 
 .home {
 	color: #F5F7FA;
-	background: url(./images/gplaypatterngrey.png);
+	background: url(../images/gplaypatterngrey.png);
 	background-repeat: repeat;
 	padding: 1rem;
 	height: calc(100% - 78px - 20rem);
@@ -138,7 +138,7 @@ h5 {
 
 .whatisssl {
 	color: #fff;
-	background: url(./images/gplaypatternlightgrey.png);
+	background: url(../images/gplaypatternlightgrey.png);
 	background-repeat: repeat;
 }
 
