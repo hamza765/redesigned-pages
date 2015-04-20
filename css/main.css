@@ -1,39 +1,69 @@
+.slabtexted .slabtext {
+    display: -moz-inline-box;
+    display: inline-block;
+    white-space: nowrap
+}
+
+.slabtextinactive .slabtext {
+    display: inline;
+    white-space: normal;
+    font-size: 1em !important;
+    letter-spacing: inherit !important;
+    word-spacing: inherit !important;
+    *letter-spacing: 0 !important;
+    *word-spacing: 0 !important;
+}
+
+.slabtextdone .slabtext {
+    display: block;
+    line-height: 0.9;
+}
 /* Helpers */
 
 .green {
-	color: #8CC152;
+    color: #8CC152 !important;
 }
 
 .white {
-	color: #F5F7FA;
+    color: #F5F7FA;
 }
 
 .vparent {
-	display: table;
-	table-layout: fixed;
+    display: table;
+    table-layout: fixed;
 }
 
 .vcparent {
-	display: table;
-	table-layout: fixed;
-	height: 100%;
-	margin: auto;
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    margin: auto;
 }
 
 .vcparent .container {
-	margin: auto;
+    margin: auto;
 }
 
 .vchild {
-	display: table-cell;
-	vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
+.list-inline {
+    padding: 5px 0;
+}
+
+.list-inline > li > a,
+.list-inline:hover > li > a,
+.list-inline:active > li > a,
+.list-inline:visited > li > a {
+    color: #fff;
+}
 /* Root Styles */
 
 body {
-	opacity: 1 !important;
-	min-width: 320px;
+    opacity: 1 !important;
+    min-width: 320px;
 }
 
 h1,
@@ -41,346 +71,280 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif;
 }
 
 .container {
-	max-width: 992px;
+    /*max-width: 992px;*/
 }
-
 /* Navigation */
 
-.nav {
-	height: 78px;
-	background: #282928;
+.shoppingbar {
+    height: 30px;
+    background: #333;
 }
 
+.navbar {
+    height: 78px;
+    background: #282828;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.nav > li > a {
+    padding: 10px 20px;
+    padding-right: 0;
+    border-radius: 5px;
+    margin: 20px 0;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff !important;
+    text-transform: uppercase;
+    outline: 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:link {
+    /*background: #555 !important;*/
+    
+    background: none !important;
+}
+
+#navbar {
+    width: auto;
+}
+
+.dropdown-menu {
+    margin-right: 18px;
+    border-radius: 0px;
+    background: #282828;
+    box-shadow: none;
+    padding: 0;
+    border-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown-menu > li > a {
+    padding: 10px 20px;
+    color: #fff;
+    text-align: right;
+    font-size: 16px;
+}
+
+.dropdown-menu > li > a:hover {
+    color: #fff;
+    background: #444;
+}
+/*.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	background: #8CC152;
+}*/
+
 #logo {
-	margin: 8px;
+    margin: 8px;
 }
 /* Home */
 
-.home:before {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: inherit;
-	content: ' ';
-}
-
 .home {
-	color: #F5F7FA;
-	background: url(../images/gplaypatterngrey.png);
-	background-repeat: repeat;
-	padding: 1rem;
-	height: calc(100% - 78px - 20rem);
+    color: #F5F7FA;
+    background: url(../images/gplaypatterngrey.png);
+    background-repeat: repeat;
+    padding: 30px;
+    height: 100%;
+    min-height: 480px;
+    max-height: calc(100% - 78px - 200px - 30px);
 }
 
 .home h1,
 .home h2,
 .home h3 {
-	margin: 5px 10px;
-	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+    margin: 5px 10px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
 }
 
 .home h1 {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .home .btn,
 .home ul {
-	margin: 10px;
-	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+    margin: 10px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
 }
 
-.outhome {
-	height: 100%;
-	width: 100%;
-	max-width: 1200px;
-	margin: auto;
+.home .container {
+    padding: 0;
 }
 
 .home .inhome {
-	background: #292929;
-	margin: 1.5rem;
-	padding: 1.5rem;
-	border-radius: 4rem;
-	border: 0.4rem #8CC152 solid;
-	overflow: hidden;
-	position: relative;
-	height: auto;
+    background: #292929;
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 10px;
+    border: 5px #8CC152 solid;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 .home .inhome .sealParent {
-	padding: 0;
+    padding: 0;
+    /*height: 100%;*/
 }
 
 .home .inhome .seal {
-	margin-left: -33.33%;
-	width: 100%;
-	float: left;
-	padding: 2rem 0;
-	max-height: 250px;
-	/*position: absolute;*/
+	/*height: 100%;*/
+	width: 100%;   
+	left:0; 
+    max-height: 500px;
 }
 
 .home .inhome .text {
-	padding: 0;
+    padding: 0;
+}
+
+.home .btn-secure {
+	background: #8CC152;
+	border-radius: 5px;
+	padding: 15px 30px;
+	font-size: 24px;
+}
+
+.home .btn-secure:hover,
+.home .btn-secure:focus {
+	color: #fff;
+}
+
+.home .container .vcparent {
+	margin: auto 0;
+	width: 100%;
 }
 
 /* What is SSL? */
 
 .whatisssl {
-	height: 20rem;
-}
-
-.whatisssl {
-	color: #fff;
-	background: url(../images/gplaypatternlightgrey.png);
-	background-repeat: repeat;
+    height: 200px;
+    color: #fff;
+    background: url(../images/gplaypatternlightgrey.png);
+    background-repeat: repeat;
 }
 
 .whatisssl h1 {
-	font-size: 72px;
-	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-	margin-top: 8px;
-	margin-bottom: 0;
+    font-size: 72px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .whatisssl h3 {
-	color: #000;
-	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-	font-size: 29px;
-	margin-top: 0;
+    color: #000;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    font-size: 29px;
+    margin-top: 0;
 }
 
 .whatisssl #video {
-	padding: 0;
-	border: 5px #555 solid;
-	border-radius: 5px;
-	width: 100%;
-	max-width: 350px;
+    padding: 0;
+    border: 5px #555 solid;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
 }
-
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
 
+@media only screen and (min-width: 992px) {
+    .whatisssl {
+        height: 200px;
+    }
+    .whatisssl h1 {
+        margin-top: 0;
+    }
 }
-
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-	.home {
-		height: calc(100% - 78px - 35rem);
-	}
 
-	.home h1 {
-		font-size: 64px;
-	}
-
-	.home h2 {
-		font-size: 54px;
-	}
-
-	.home h3 {
-		font-size: 36px;
-	}
-
-	.whatisssl {
-		height: 35rem;
-	}
-
-	.whatisssl h1 {
-		margin-top: 0;
-	}
+@media only screen and (max-width: 991px) {
+    .whatisssl {
+        height: 200px;
+    }
+    .whatisssl h1 {
+        margin-top: 0;
+    }
 }
-
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-	.home {
-		height: calc(100% - 78px - 35rem);
-	}
 
-	.home h1 {
-		font-size: 64px;
-	}
-
-	.home h2 {
-		font-size: 54px;
-	}
-
-	.home h3 {
-		font-size: 36px;
-	}
-
-	.whatisssl {
-		height: 35rem;
-	}
-
-	.whatisssl h1 {
-		margin-top: 0;
-	}
+@media only screen and (max-width: 768px) {
+    .whatisssl {
+        height: 350px;
+    }
+    .whatisssl h1 {
+        margin-top: 0;
+    }
 }
 
-@media only screen and (max-width : 605px) {
-	.home {
-		height: 54rem;
-		/*padding: 0;*/
-	}
-
-	.home .inhome {
-		height: auto;
-		border-radius: 1rem;
-		/*margin: 0;*/
-	}
-
-	.home h1 {
-		font-size: 58px;
-	}
-
-	.home h2 {
-		font-size: 44px;
-	}
-
-	.home h3 {
-		font-size: 36px;
-	}
-
-	.whatisssl {
-		height: 35rem;
-	}
-
-	.whatisssl h1 {
-		font-size: 64px;
-	}
-
-	.whatisssl h3 {
-		font-size: 26px;
-	}
+@media only screen and (max-width: 605px) {
+    .whatisssl {
+        height: 350px;
+    }
+    .whatisssl h1 {
+        font-size: 64px;
+    }
+    .whatisssl h3 {
+        font-size: 26px;
+    }
 }
+/* Extra Small Devices, Phones */
 
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-	.home {
-		height: 51rem;
-		/*padding: 0;*/
-	}
-
-	.home .inhome {
-		height: auto;
-		border-radius: 1rem;
-		margin: 0;
-	}
-
-	.home h1 {
-		font-size: 51px;
-	}
-
-	.home h2 {
-		font-size: 43px;
-	}
-
-	.home h3 {
-		font-size: 30px;
-	}
-
-	.whatisssl {
-		height: 30rem;
-	}
-
-	.whatisssl h1 {
-		font-size: 64px;
-	}
-
-	.whatisssl h3 {
-		font-size: 26px;
-	}
+@media only screen and (max-width: 480px) {
+    .whatisssl {
+        height: 300px;
+    }
+    .whatisssl h1 {
+        font-size: 64px;
+    }
+    .whatisssl h3 {
+        font-size: 26px;
+    }
 }
-
 /* Even smaller devices */
 
-@media only screen and (max-width: 400px){
-	.whatisssl h1 {
-		font-size: 58px;
-	}
-
-	.whatisssl h3 {
-		font-size: 24px;
-	}
+@media only screen and (max-width: 400px) {
+    .whatisssl h1 {
+        font-size: 58px;
+    }
+    .whatisssl h3 {
+        font-size: 24px;
+    }
 }
 
-@media only screen and (max-width: 380px){
-	.home {
-		height: 48rem;
-	}
-
-	.home h1 {
-		font-size: 48px;
-	}
-
-	.home h2 {
-		font-size: 36px;
-	}
-
-	.home h3 {
-		font-size: 28px;
-	}
+@media only screen and (max-width: 370px) {
+    .whatisssl {
+        height: 250px;
+    }
+    .whatisssl h1 {
+        font-size: 52px;
+    }
+    .whatisssl h3 {
+        font-size: 20px;
+    }
 }
 
-@media only screen and (max-width: 365px){
-	.home {
-		height: 44rem;
-	}
-
-	.home h1 {
-		font-size: 42px;
-	}
-
-	.home h2 {
-		font-size: 32px;
-	}
-
-	.home h3 {
-		font-size: 24px;
-	}
-
-	.whatisssl {
-		height: 25rem;
-	}
-
-	.whatisssl h1 {
-		font-size: 52px;
-	}
-
-	.whatisssl h3 {
-		font-size: 20px;
-	}
-}
-
-@media only screen and (max-width: 329px){
-	.home {
-		height: 400px;
-	}
-
-	.home h1 {
-		font-size: 36px;
-	}
-
-	.home h2 {
-		font-size: 28px;
-	}
-
-	.home h3 {
-		font-size: 20px;
-	}
-
-	.whatisssl {
-		height: 24rem;
-	}
-
-	.whatisssl h1 {
-		font-size: 48px;
-	}
-
+@media only screen and (max-width: 330px) {
+    .whatisssl {
+        height: 240px;
+    }
+    .whatisssl h1 {
+        font-size: 48px;
+    }
 }
