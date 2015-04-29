@@ -75,19 +75,31 @@ body {
     opacity: 1 !important;
     overflow-x: hidden;
     /*min-width: 320px;*/
+    /*padding-top: 108px;*/
 }
 
 section {
     padding-bottom: 60px;
 }
 
+.taco {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999999999;
+}
+
 .container {
-    /*max-width: 992px;*/
+    /*max-width: 992px;*/a
 }
 
 .headerBlock {
 	text-align: center;
 	padding: 50px 0;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    font-size: 48px;
+    color: #444;
 }
 /* Navigation */
 
@@ -210,11 +222,13 @@ section {
 
 .home {
     color: #F5F7FA;
-    background: url(../images/gplaypatterngrey.png);
+    background: url(../images/gplaypatternblack.png);
     background-repeat: repeat;
     padding: 20px;
-    height: calc(100vh - 108px);
-    max-height: 1080px;
+    /*height: calc(100vh - 108px);*/
+    /*max-height: 1080px;*/
+    /*height: 480px;*/
+    margin-top: 108px;
 }
 
 .home h1,
@@ -243,39 +257,6 @@ section {
     padding: 0;
 }
 
-.home .inhome {
-    background: #292929;
-    padding: 15px;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 10px;
-    border: 5px #8CC152 solid;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
-
-.home .inhome * {
-    z-index: 0;
-}
-
-.home .inhome .sealParent {
-    padding: 0;
-    /*height: 100%;*/
-}
-
-.home .inhome .seal {
-	/*height: 100%;*/
-	width: 100%;   
-	left:0; 
-    /*max-height: 500px;*/
-}
-
-.home .inhome .text {
-    padding: 0;
-}
-
 .home .btn-secure {
 	background: #8CC152;
 	border-radius: 5px;
@@ -300,6 +281,7 @@ section {
     background: url(../images/gplaypatternlightgrey.png);
     background-repeat: repeat;
     padding: 20px;
+    /*margin-top: 108px;*/
 }
 
 .whatisssl .container{
@@ -428,97 +410,8 @@ table > tbody > tr > td:nth-child(1) {
     font-weight: 600;
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 992px) {
-    .home h1 {
-        font-size: 88px;
-    }
-
-    .home h2 {
-        font-size: 64px;
-    }
-
-    .home h3 {
-        font-size: 48px;
-    }
-
-    .home .btn {
-        padding: 15px 20px;
-        font-size: 24px;
-    }
-}
-
-@media only screen and (min-width: 1200px) and (max-height: 800px) {
-    .home h1 {
-        font-size: 108px;
-    }
-
-    .home h2 {
-        font-size: 82px;
-    }
-
-    .home h3 {
-        font-size: 48px;
-    }
-
-    .home .btn {
-        padding: 15px 20px;
-        font-size: 24px;
-    }
-}
-
-@media only screen and (min-width: 1200px) and (min-height: 800px) {
-    .home h1 {
-        font-size: 112px;
-    }
-
-    .home h2 {
-        font-size: 96px;
-    }
-
-    .home h3 {
-        font-size: 48px;
-    }
-
-    .home .btn {
-        padding: 15px 20px;
-        font-size: 24px;
-    }
-}
-
-@media only screen and (min-width: 1200px) and (min-height: 960px) {
-    .home h1 {
-        font-size: 128px;
-    }
-
-    .home h2 {
-        font-size: 96px;
-    }
-
-    .home h3 {
-        font-size: 48px;
-    }
-
-    .home .btn {
-        padding: 15px 20px;
-        font-size: 24px;
-    }
-}
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px) {
-    .home h1 {
-        font-size: 72px;
-    }
-
-    .home h2 {
-        font-size: 58px;
-    }
-
-    .home h3 {
-        font-size: 42px;
-    }
-
     .plans .uccpanel {
         padding-top: 15px;
         text-align: center;
@@ -533,202 +426,3 @@ table > tbody > tr > td:nth-child(1) {
         float: none !important;
     }
 }
-
-@media only screen and (max-width : 949px) {
-    .home h1 {
-        font-size: 72px;
-    }
-
-    .home h2 {
-        font-size: 58px;
-    }
-
-    .home h3 {
-        font-size: 42px;
-    }
-}
-
-@media only screen and (max-width : 904px){
-    .home h1 {
-        font-size: 72px;
-    }
-
-    .home h2 {
-        font-size: 58px;
-    }
-
-    .home h3 {
-        font-size: 42px;
-    }
-}
-
-@media only screen and (max-width : 800px) {
-    .home h1 {
-        font-size: 72px;
-    }
-
-    .home h2 {
-        font-size: 58px;
-    }
-
-    .home h3 {
-        font-size: 42px;
-    }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    .home h1 {
-        font-size: 68px;
-    }
-
-    .home h2 {
-        font-size: 54px;
-    }
-
-    .home h3 {
-        font-size: 38px;
-    }
-}
-
-@media only screen and (max-width : 700px) {
-    .home h1 {
-        font-size: 64px;
-    }
-
-    .home h2 {
-        font-size: 48px;
-    }
-
-    .home h3 {
-        font-size: 36px;
-    }
-}
-
-@media only screen and (max-width : 605px) {
-    .home .inhome {
-        height: auto;
-    }
-
-    .home h1 {
-        font-size: 58px;
-    }
-
-    .home h2 {
-        font-size: 44px;
-    }
-
-    .home h3 {
-        font-size: 36px;
-    }
-}
-
-@media only screen and (max-width: 565px) {
-    .home h1 {
-        font-size: 52px;
-    }
-
-    .home h2 {
-        font-size: 38px;
-    }
-
-    .home h3 {
-        font-size: 32px;
-    }
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-    .home .inhome {
-        height: auto;
-        margin: 0;
-    }
-
-    .home h1 {
-        font-size: 50px;
-    }
-
-    .home h2 {
-        font-size: 36px;
-    }
-
-    .home h3 {
-        font-size: 30px;
-    }
-
-    .home .btn-secure {
-        background: #8CC152;
-        border-radius: 5px;
-        padding: 15px 20px;
-        font-size: 16px;
-    }
-}
-
-/* Even smaller devices */
-
-@media only screen and (max-width: 385px){
-    .home h1 {
-        font-size: 48px;
-    }
-
-    .home h2 {
-        font-size: 36px;
-    }
-
-    .home h3 {
-        font-size: 28px;
-    }
-}
-
-@media only screen and (max-width: 370px){
-    .home h1 {
-        font-size: 42px;
-    }
-
-    .home h2 {
-        font-size: 32px;
-    }
-
-    .home h3 {
-        font-size: 24px;
-    }
-}
-
-@media only screen and (max-width: 330px){
-    .home h1 {
-        font-size: 36px;
-    }
-
-    .home h2 {
-        font-size: 28px;
-    }
-
-    .home h3 {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (min-height: 1200px) {
-    .home {
-        height: auto !important;
-        min-height: 0 !important;
-    }
-
-    .home .vcparent {
-        height: auto;
-    }
-}
-
-/*@media only screen and (max-height: 1200px) {
-    @-moz-document url-prefix() {
-        .shoppingbar {
-            z-index: 999;
-            background: #000;
-        }
-
-        .home {
-            margin-top: -108px;
-            z-index: -1;
-        }
-    }
-}*/

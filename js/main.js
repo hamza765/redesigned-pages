@@ -49,7 +49,11 @@ $(window).resize(function() {
         child.css("min-height", child.outerHeight() + h);
     });
 
-    $(".home").css("min-height", $(".inhome").outerHeight() + 60);
+    // $(".home").css("min-height", $(".inhome").outerHeight() + 60);
+    // var winheight = "innerHeight" in window 
+    //            ? window.innerHeight
+    //            : document.documentElement.offsetHeight; 
+    // $(".home").css("height", winheight - 108 - $("#whatisssl").outerHeight());
 });
 
 $(window).load(function() {
