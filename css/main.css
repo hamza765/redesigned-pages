@@ -1,24 +1,16 @@
-.slabtexted .slabtext {
-    display: -moz-inline-box;
-    display: inline-block;
-    white-space: nowrap
+* {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.slabtextinactive .slabtext {
-    display: inline;
-    white-space: normal;
-    font-size: 1em !important;
-    letter-spacing: inherit !important;
-    word-spacing: inherit !important;
-    *letter-spacing: 0 !important;
-    *word-spacing: 0 !important;
-}
-
-.slabtextdone .slabtext {
-    display: block;
-    line-height: 0.9;
-}
 /* Helpers */
+
+.bold {
+    font-weight: 600;
+}
+
+.darkgreen {
+    color: #689636;
+}
 
 .green {
     color: #8CC152 !important;
@@ -32,6 +24,20 @@ div .green {
     color: #F5F7FA;
 }
 
+.hparent {
+    overflow: hidden;
+    position: relative;
+    /*width: 100%;*/
+}
+
+.hchild {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .vparent {
     display: table;
     table-layout: fixed;
@@ -40,7 +46,7 @@ div .green {
 .vcparent {
     display: table;
     table-layout: fixed;
-    /*height: 100%;*/
+    height: 100%;
     margin: auto;
 }
 
@@ -67,11 +73,16 @@ div .green {
 
 body {
     opacity: 1 !important;
+    overflow-x: hidden;
     /*min-width: 320px;*/
 }
 
+section {
+    padding-bottom: 60px;
+}
+
 .container {
-    max-width: 992px;
+    /*max-width: 992px;*/
 }
 
 .headerBlock {
@@ -121,6 +132,7 @@ body {
     border-color: #222;
     margin-top: 13px;
     background: #333;
+    overflow-x: hidden;
 }
 
 .nav > li > a {
@@ -188,11 +200,6 @@ body {
     color: #fff;
     background: #444;
 }
-/*.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
-	background: #8CC152;
-}*/
 
 #logo {
     margin: 15px;
@@ -206,14 +213,20 @@ body {
     background: url(../images/gplaypatterngrey.png);
     background-repeat: repeat;
     padding: 20px;
+    /*min-height: 800px;*/
+    height: calc(100% - 108px);
+    max-height: 1080px;
 }
 
 .home h1,
 .home h2,
-.home h3 {
+.home h3,
+.home h1 .green,
+.home h2 .green,
+.home h3 .green {
     margin: 5px 10px;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
-    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
 }
 
 .home h1 {
@@ -256,7 +269,7 @@ body {
 	/*height: 100%;*/
 	width: 100%;   
 	left:0; 
-    max-height: 500px;
+    /*max-height: 500px;*/
 }
 
 .home .inhome .text {
@@ -287,7 +300,6 @@ body {
     background: url(../images/gplaypatternlightgrey.png);
     background-repeat: repeat;
     padding: 20px;
-    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif;
 }
 
 .whatisssl .container{
@@ -300,14 +312,20 @@ body {
     margin-top: 8px;
     margin-bottom: 0;
     white-space:nowrap;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+}
+
+.whatisssl h1 .green {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
 }
 
 .whatisssl h3 {
-    color: #000;
-    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    color: #333;
+    text-shadow: 1px 1px 0px rgba(100, 100, 100, 0.5);
     font-size: 29px;
     margin-top: 0;
     white-space:nowrap;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
 }
 
 .whatisssl #video {
@@ -318,18 +336,164 @@ body {
     /*max-width: 350px;*/
 }
 
+.plans {
+    background: url(../images/gplaypatternwhite.png);
+    background-repeat: repeat;
+}
+
+.plans h3 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.plans h4 {
+    font-size: 24px;
+}
+
+.plans h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.plans .pricing-panel {
+    position: relative;
+}
+
+.plans .pricing-panel-content {
+    font-size: 18px;
+}
+
+.plans .price {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+}
+
+.plans .fa-lock {
+    color: #eeee00;
+    font-size: 48px;
+}
+
+.plans .panel {
+    padding: 0;
+}
+
+.plans .uccpanel h3 {
+    margin: 0;
+}
+
+.plans .ucctable {
+    padding: 0;
+    margin: 0;
+}
+
+.plans .ucctable tr > td:last-child {
+    padding-left: 15px;
+}
+
+.plans .btn-secure {
+    background: #8CC152;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.plans .btn-secure:hover,
+.plans .btn-secure:focus {
+    color: #fff;
+}
+
+table > tbody > tr > td:nth-child(1) {
+    text-align: center !important;
+}
+
+.faq {
+    background: url(../images/gplaypatternlightgrey.png);
+    background-repeat: repeat;
+}
+
+.faq .panel-heading a{
+    color: #444;
+    text-decoration: none;
+}
+
+.faq .panel-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 992px) {
     .home h1 {
-        font-size: 82px;
+        font-size: 88px;
     }
 
     .home h2 {
-        font-size: 61px;
+        font-size: 64px;
     }
 
     .home h3 {
+        font-size: 48px;
+    }
+
+    .home .btn {
+        padding: 15px 20px;
         font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-height: 800px) {
+    .home h1 {
+        font-size: 108px;
+    }
+
+    .home h2 {
+        font-size: 82px;
+    }
+
+    .home h3 {
+        font-size: 48px;
+    }
+
+    .home .btn {
+        padding: 15px 20px;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (min-height: 800px) {
+    .home h1 {
+        font-size: 112px;
+    }
+
+    .home h2 {
+        font-size: 96px;
+    }
+
+    .home h3 {
+        font-size: 48px;
+    }
+
+    .home .btn {
+        padding: 15px 20px;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (min-height: 960px) {
+    .home h1 {
+        font-size: 128px;
+    }
+
+    .home h2 {
+        font-size: 96px;
+    }
+
+    .home h3 {
+        font-size: 48px;
     }
 
     .home .btn {
@@ -350,6 +514,20 @@ body {
 
     .home h3 {
         font-size: 42px;
+    }
+
+    .plans .uccpanel {
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .plans .uccpanel h3{
+        margin-bottom: 15px;
+    }
+
+    .plans .uccpanel .btn {
+        margin: 15px;
+        float: none !important;
     }
 }
 
@@ -527,4 +705,13 @@ body {
     }
 }
 
+@media only screen and (min-height: 1200px) {
+    .home {
+        height: auto !important;
+        min-height: 0 !important;
+    }
 
+    .home .vcparent {
+        height: auto;
+    }
+}
