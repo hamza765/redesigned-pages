@@ -213,8 +213,7 @@ section {
     background: url(../images/gplaypatterngrey.png);
     background-repeat: repeat;
     padding: 20px;
-    /*min-height: 800px;*/
-    height: calc(100% - 108px);
+    height: calc(100vh - 108px);
     max-height: 1080px;
 }
 
@@ -719,3 +718,17 @@ table > tbody > tr > td:nth-child(1) {
         height: auto;
     }
 }
+
+/*@media only screen and (max-height: 1200px) {
+    @-moz-document url-prefix() {
+        .shoppingbar {
+            z-index: 999;
+            background: #000;
+        }
+
+        .home {
+            margin-top: -108px;
+            z-index: -1;
+        }
+    }
+}*/
