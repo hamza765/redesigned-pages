@@ -9,105 +9,7 @@
  * Released under the MIT licence: http://www.opensource.org/licenses/mit-license.php
  */
 
-(function ($, defaults) {
-    "use strict";
-    var _eventIsBound = false, _i, _j, _recalc, _settings = {}, _watch = {elements: [], settings: []};
-    // add class for calculating width, the ugly browser safe way
-    $("<style>.textStretch-calc{display:inline-block !important;*display:inline !important;white-space:nowrap !important;width:auto !important;padding:0 !important;text-align:left !important}</style>").appendTo("head");
-
-    $.fn.textStretch = function (options) {
-        // validate and import user arguments
-        (function(args){
-            for (_i = 0; _i < args.length; _i += 1) {
-                // import arguments if defined, else defaults
-                _settings[args[_i]] = options && options[args[_i]] ? options[args[_i]] : defaults[args[_i]];
-                // validate data types
-                if(typeof _settings[args[_i]] !== "number") {
-                    throw "textStretch error. Argument \"" + args[_i] + "\" must be a number. Argument given was \"" + _settings[args[_i]] + "\".";
-                }
-            }
-        }(["minFontSize", "maxFontSize"]));
-        
-        _settings.maxFontSize = _settings.maxFontSize || Number.POSITIVE_INFINITY;
-        
-        function _textStretch(element, settings) {
-            var _boxWidth, _fontSize;
-            // hasLayout fails (ie7)
-            if(element.currentStyle && !element.currentStyle.hasLayout){
-                element.style.zoom = "1";
-            }
-            // get box width
-            _boxWidth = element.clientWidth;
-        
-            // for safe calculation the font-size needs to be big.
-            element.style.fontSize = "100px";
-        
-            // temporarily apply classes for measuring width
-            element.className += " textStretch-calc";
-        
-            // calculate new font size. 100 is the font-size
-            _fontSize = parseInt(_boxWidth / (element.clientWidth / 100), 10);
-        
-            // overdefine if not within specified font-size span
-            _fontSize = Math.min(Math.max(_fontSize, settings.minFontSize), settings.maxFontSize);
-        
-            // apply font-size
-            element.style.fontSize = _fontSize + "px";
-        
-            // sometimes new text will be too wide due to browsers (webkit only?) rounding letter-spacing to even pixels
-            if(element.clientWidth > _boxWidth) {
-                element.style.fontSize = _fontSize - 2 + "px";
-            }
-        
-            // remove inline-block measuring-class
-            element.className = element.className.substr(0, element.className.length - 17);
-        
-            // true if vertical scrollbar has not been added or removed
-            return _boxWidth === element.clientWidth;
-        }
-        
-        function _textStretchEach(elements, settings, noRecalc) {
-            for (_i = 0, _recalc = false; _i < elements.length && !_recalc; _i += 1) {
-                // settings can be an array for each element or json-object for all of them
-                _recalc = !_textStretch(elements[_i], settings[_i] || settings);
-            }
-            // recalculate if vertical scrollbar has been added or removed due to first run
-            if (_recalc && !noRecalc) {
-                _textStretchEach(elements, settings, true);
-            }
-        }
-        
-
-        // run
-        _textStretchEach(this, _settings);
-
-        // add new elements to event-handler list.
-        for (_i = 0; _i < this.length; _i += 1) {
-            _j = $.inArray(this[_i], _watch.elements);
-            if(_j === -1) {
-                _watch.elements.push(this[_i]);
-                _watch.settings.push(_settings);
-            } else {
-                _watch.settings[_j] = _settings;
-            }
-        }
-
-        // bind events
-        if(!_eventIsBound){
-            $(window).on("orientationchange.textStretch resize.textStretch", function(){
-                _textStretchEach(_watch.elements, _watch.settings);
-            });
-            _eventIsBound = true;
-        }
-
-        // make jquery method chainable
-        return this;
-    };
-
-    // defaults
-    defaults.minFontSize = 0;
-    defaults.maxFontSize = 0;
-}(jQuery, jQuery.textStretch = {}));
+!function(t,e){"use strict";var n,i,r,s=!1,a={},o={elements:[],settings:[]};t("<style>.textStretch-calc{display:inline-block !important;*display:inline !important;white-space:nowrap !important;width:auto !important;padding:0 !important;text-align:left !important}</style>").appendTo("head"),t.fn.textStretch=function(l){function c(t,e){var n,i;return t.currentStyle&&!t.currentStyle.hasLayout&&(t.style.zoom="1"),n=t.clientWidth,t.style.fontSize="100px",t.className+=" textStretch-calc",i=parseInt(n/(t.clientWidth/100),10),i=Math.min(Math.max(i,e.minFontSize),e.maxFontSize),t.style.fontSize=i+"px",t.clientWidth>n&&(t.style.fontSize=i-2+"px"),t.className=t.className.substr(0,t.className.length-17),n===t.clientWidth}function m(t,e,i){for(n=0,r=!1;n<t.length&&!r;n+=1)r=!c(t[n],e[n]||e);r&&!i&&m(t,e,!0)}for(function(t){for(n=0;n<t.length;n+=1)if(a[t[n]]=l&&l[t[n]]?l[t[n]]:e[t[n]],"number"!=typeof a[t[n]])throw'textStretch error. Argument "'+t[n]+'" must be a number. Argument given was "'+a[t[n]]+'".'}(["minFontSize","maxFontSize"]),a.maxFontSize=a.maxFontSize||Number.POSITIVE_INFINITY,m(this,a),n=0;n<this.length;n+=1)i=t.inArray(this[n],o.elements),-1===i?(o.elements.push(this[n]),o.settings.push(a)):o.settings[i]=a;return s||(t(window).on("orientationchange.textStretch resize.textStretch",function(){m(o.elements,o.settings)}),s=!0),this},e.minFontSize=0,e.maxFontSize=0}(jQuery,jQuery.textStretch={});
 
 $(".fitwidth").textStretch();
 
@@ -116,24 +18,19 @@ $(window).resize(function() {
 
     $(".pricing-panel-content:last-child").css("min-height", '');
     
-    // $(".home").css("min-height", $(".inhome").outerHeight() + 60);
-    // var winheight = "innerHeight" in window 
-    //            ? window.innerHeight
-    //            : document.documentElement.offsetHeight; 
-    // $(".home").css("height", winheight - 108 - $("#whatisssl").outerHeight());
-    $(".sph").each(function(){
-        $(this).css("min-height", '');
-    });
+    $(".sph").css("min-height", '');
+
     if ($(window).width() > 768) {
         var ppheights = $(".pricing-panel").map(function() {
             return $(this).outerHeight();
         }).get();
         $(".pricing-panel").css("min-height", Math.max.apply(Math, ppheights));
-    
+
         var pheights = $(".pricing-column").map(function() {
             return $(this).outerHeight();
         });
         var ptalletest = Math.max.apply(Math, pheights);
+
         $(".pricing-column").each(function() {
             var h = Math.abs($(this).outerHeight() - ptalletest);
             var child = $(this).children(".pricing-panel-content").children().last();
