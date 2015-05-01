@@ -451,16 +451,21 @@ table > tbody > tr > td:nth-child(1) {
     }
 
     .home {
-        padding: 10px;
-    }
-
-    .home .col-xs-12 {
         padding: 0;
     }
 
-    .home .btn-secure {
-        font-size: 16px;
+    .home .col-xs-12 {
         padding: 15px;
+        text-align: center;
+    }
+
+    .home #getSecure {
+        font-size: 28px;
+        padding: 10px;
+        font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+        font-weight: 600;
+        width: 100%;
+        margin: 0;
     }
 
     .uccpanel {
