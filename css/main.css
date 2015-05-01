@@ -51,7 +51,7 @@ div .green {
     margin: auto;
 }
 
-.vcparent .container {
+.vcparent .{
     margin: auto;
 }
 
@@ -73,7 +73,7 @@ div .green {
 /* Root Styles */
 
 body {
-    opacity: 1 !important;
+    /*opacity: 1 !important;*/
     overflow-x: hidden;
 }
 
@@ -88,7 +88,7 @@ section {
     z-index: 999999999;
 }
 
-.container {
+.{
     /*max-width: 992px;*/
 }
 
@@ -155,7 +155,7 @@ section {
     font-size: 18px;
     font-weight: 300;
     color: #fff !important;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     outline: 0;
 }
 
@@ -249,7 +249,7 @@ section {
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
 }
 
-.home .container {
+.home .{
     padding: 0;
 }
 
@@ -265,7 +265,7 @@ section {
 	color: #fff;
 }
 
-.home .container .vcparent {
+.home ..vcparent {
 	margin: auto 0;
 	width: 100%;
 }
@@ -339,7 +339,7 @@ section {
     position: relative;
 }
 
-.plans .pricing-panel-content {
+.plans .pricing-panel-content, .plans .ucccolumn {
     font-size: 18px;
 }
 
@@ -387,6 +387,26 @@ section {
     color: #fff;
 }
 
+.plans .ucccolumn {
+    border: 1px #faa solid !important;
+}
+
+.plans .ucccolumn .panel-heading {
+    color: #b22;
+    background: #fcc;
+/*    color: #666;
+    background: #ddd;*/
+}
+
+.plans .ucccolumn ul {
+    margin: 0;
+}
+
+.plans .ucccolumn li {
+    border-right: none;
+    border-left: none;
+}
+
 table > tbody > tr > td:nth-child(1) {
     text-align: center !important;
 }
@@ -404,6 +424,23 @@ table > tbody > tr > td:nth-child(1) {
 .faq .panel-title {
     font-size: 18px;
     font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+    .plans .ucccolumn .col-sm-8,
+    .plans .ucccolumn .col-sm-7 {
+        padding-left: 0;
+    }
+
+    .plans .ucccolumn .col-sm-4,
+    .plans .ucccolumn .col-sm-5 {
+        border-right: 1px #faa solid !important;
+        padding-right: 0;
+    }
+
+    #plans .ucccolumn ul > li:first-child {
+        border-top: 0;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -473,7 +510,7 @@ table > tbody > tr > td:nth-child(1) {
     }
 
     .uccpanel h3 {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .uccpanel .col-xs-12 {
@@ -481,8 +518,8 @@ table > tbody > tr > td:nth-child(1) {
     }
 
     .uccpanel .btn-secure {
-        font-size: 16px;
+        font-size: 24px;
         padding: 10px 15px;
-        /*max-width: 100%;*/
+        width: 100%;
     }
 }

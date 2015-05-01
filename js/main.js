@@ -113,31 +113,42 @@ $(".fitwidth").textStretch();
 
 $(window).resize(function() {
     $(".pricing-panel").css("min-height", '');
-    var ppheights = $(".pricing-panel").map(function() {
-        return $(this).outerHeight();
-    }).get();
-    $(".pricing-panel").css("min-height", Math.max.apply(Math, ppheights));
 
     $(".pricing-panel-content:last-child").css("min-height", '');
-    var pheights = $(".pricing-column").map(function() {
-        return $(this).outerHeight();
-    });
-    var ptalletest = Math.max.apply(Math, pheights);
-    $(".pricing-column").each(function() {
-        var h = Math.abs($(this).outerHeight() - ptalletest);
-        var child = $(this).children(".pricing-panel-content").children().last();
-        child.css("min-height", child.outerHeight() + h);
-    });
-
+    
     // $(".home").css("min-height", $(".inhome").outerHeight() + 60);
     // var winheight = "innerHeight" in window 
     //            ? window.innerHeight
     //            : document.documentElement.offsetHeight; 
     // $(".home").css("height", winheight - 108 - $("#whatisssl").outerHeight());
+    $(".sph").each(function(){
+        $(this).css("min-height", '');
+    });
+    if ($(window).width() > 768) {
+        var ppheights = $(".pricing-panel").map(function() {
+            return $(this).outerHeight();
+        }).get();
+        $(".pricing-panel").css("min-height", Math.max.apply(Math, ppheights));
+    
+        var pheights = $(".pricing-column").map(function() {
+            return $(this).outerHeight();
+        });
+        var ptalletest = Math.max.apply(Math, pheights);
+        $(".pricing-column").each(function() {
+            var h = Math.abs($(this).outerHeight() - ptalletest);
+            var child = $(this).children(".pricing-panel-content").children().last();
+            child.css("min-height", child.outerHeight() + h);
+        });
+
+        $(".sph").each(function(){
+            $(this).css("min-height", $(this).parent().height());
+        });
+    }
 });
 
 $(window).load(function() {
     $(window).resize();
+    $("body").css("opacity", "");
 });
 
 jQuery.fn.extend({
