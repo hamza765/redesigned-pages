@@ -75,8 +75,6 @@ div .green {
 body {
     opacity: 1 !important;
     overflow-x: hidden;
-    /*min-width: 320px;*/
-    /*padding-top: 108px;*/
 }
 
 section {
@@ -408,8 +406,7 @@ table > tbody > tr > td:nth-child(1) {
     font-weight: 600;
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 991px) {
+@media only screen and (max-width: 991px) {
     .plans .uccpanel {
         padding-top: 15px;
         text-align: center;
@@ -418,9 +415,69 @@ table > tbody > tr > td:nth-child(1) {
     .plans .uccpanel h3{
         margin-bottom: 15px;
     }
-
+/*
     .plans .uccpanel .btn {
         margin: 15px;
         float: none !important;
+    }*/
+}
+
+@media only screen and (max-width: 768px) {
+    .headerBlock {
+        padding: 30px 0;
+        font-size: 36px;
+        margin: 0;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    .nav {
+        margin: 0 !important;
+    }
+
+    .navbar-collapse.in, .navbar-collapse.collapsing {
+        top: 13px;
+        position: relative;
+    }
+
+    #navbar {
+        margin: 0 -15px !important;
+    }
+
+    .navbar-collapse.in > ul > li > a, .navbar-collapse.collapsing > ul > li > a {
+        padding: 5px 0;
+    }
+
+    .home {
+        padding: 10px;
+    }
+
+    .home .col-xs-12 {
+        padding: 0;
+    }
+
+    .home .btn-secure {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .uccpanel {
+        padding: 0;
+    }
+
+    .uccpanel h3 {
+        font-size: 20px;
+    }
+
+    .uccpanel .col-xs-12 {
+        padding: 0;
+    }
+
+    .uccpanel .btn-secure {
+        font-size: 16px;
+        padding: 10px 15px;
+        /*max-width: 100%;*/
     }
 }
