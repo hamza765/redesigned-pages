@@ -28,7 +28,6 @@ div .green {
 .hparent {
     overflow: hidden;
     position: relative;
-    /*width: 100%;*/
 }
 
 .hchild {
@@ -73,7 +72,6 @@ div .green {
 /* Root Styles */
 
 body {
-    /*opacity: 1 !important;*/
     overflow-x: hidden;
 }
 
@@ -88,10 +86,6 @@ section {
     z-index: 999999999;
 }
 
-.{
-    /*max-width: 992px;*/
-}
-
 .headerBlock {
 	text-align: center;
 	padding: 50px 0;
@@ -99,6 +93,7 @@ section {
     font-weight: 600;
     font-size: 56px;
     color: #444;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 /* Navigation */
 
@@ -155,7 +150,6 @@ section {
     font-size: 18px;
     font-weight: 300;
     color: #fff !important;
-    /*text-transform: uppercase;*/
     outline: 0;
 }
 
@@ -312,7 +306,6 @@ section {
     padding: 0;
     border: 5px #555 solid;
     border-radius: 5px;
-    width: 100%;
 }
 
 .plans {
@@ -394,8 +387,6 @@ section {
 .plans .ucccolumn .panel-heading {
     color: #b22;
     background: #fcc;
-/*    color: #666;
-    background: #ddd;*/
 }
 
 .plans .ucccolumn ul {
@@ -414,6 +405,11 @@ table > tbody > tr > td:nth-child(1) {
 .faq {
     background: url(../images/gplaypatternlightgrey.png);
     background-repeat: repeat;
+}
+
+.faq .headerBlock {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .faq .panel-heading a{
@@ -452,11 +448,6 @@ table > tbody > tr > td:nth-child(1) {
     .plans .uccpanel h3{
         margin-bottom: 15px;
     }
-/*
-    .plans .uccpanel .btn {
-        margin: 15px;
-        float: none !important;
-    }*/
 }
 
 @media only screen and (max-width: 768px) {
