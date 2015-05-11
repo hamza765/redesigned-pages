@@ -104,6 +104,7 @@ section {
     text-align: center;
     background: url(../images/gplaypatternblack.png);
     background-repeat: repeat;
+    min-height: 175px;
     max-height: 250px;
     padding: 15px 0;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
@@ -608,5 +609,15 @@ table > tbody > tr > td:nth-child(1) {
         font-size: 24px;
         padding: 10px 15px;
         width: 100%;
+    }
+
+    .features > div {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .features > div {
+        text-align: left;
     }
 }
