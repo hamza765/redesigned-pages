@@ -73,6 +73,7 @@ div .green {
 
 body {
     overflow-x: hidden;
+    padding-top: 108px;
 }
 
 section {
@@ -84,6 +85,21 @@ section {
     width: 100%;
     top: 0;
     z-index: 999999999;
+}
+
+.titleBlock {
+    text-align: center;
+    background: url(../images/gplaypatternblack.png);
+    background-repeat: repeat;
+    max-height: 250px;
+    padding: 15px 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.titleBlock h1 {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    color: #fff;
 }
 
 .headerBlock {
@@ -218,7 +234,6 @@ section {
     background: url(../images/gplaypatternblack.png);
     background-repeat: repeat;
     padding: 20px;
-    margin-top: 108px;
 }
 
 .home h1,
@@ -398,6 +413,17 @@ section {
     border-left: none;
 }
 
+.features {
+    padding: 0;
+    margin: 0;
+}
+
+.features > div {
+    padding: 10px;
+    /*border-top: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
+}
+
 table > tbody > tr > td:nth-child(1) {
     text-align: center !important;
 }
@@ -451,6 +477,15 @@ table > tbody > tr > td:nth-child(1) {
 }
 
 @media only screen and (max-width: 768px) {
+    .titleBlock {
+        padding: 25px 0;
+    }
+
+    .titleBlock h1 {
+        font-size: 28px;
+        margin: 0;
+    }
+
     .headerBlock {
         padding: 30px 0;
         font-size: 36px;
