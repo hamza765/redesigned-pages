@@ -17,6 +17,10 @@
     color: #8CC152 !important;
 }
 
+.red {
+    color: #d33;
+}
+
 h1 .green {
     font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
     font-weight: 600;
@@ -536,6 +540,11 @@ table > tbody > tr > td:nth-child(1) {
     .titleBlock h1 {
         font-size: 28px;
         margin: 0;
+    }
+
+    .titleBlock h2 {
+        font-size: 20px;
+        margin-bottom: 0;
     }
 
     .headerBlock {
