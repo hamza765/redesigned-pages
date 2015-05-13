@@ -17,6 +17,10 @@
     color: #8CC152 !important;
 }
 
+.checkmark {
+    font-size: 20px;
+}
+
 .red {
     color: #d33;
 }
