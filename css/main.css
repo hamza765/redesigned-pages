@@ -432,12 +432,14 @@ section {
     border-left: none;
 }
 
-.features {
+.features {}
+
+.features .items {
     padding: 0;
     margin: 0;
 }
 
-.features > div {
+.features .items > div {
     padding: 10px;
     /*border-top: 1px solid #ccc;*/
     border-bottom: 1px solid #ccc;
@@ -467,23 +469,18 @@ table > tbody > tr > td:nth-child(1) {
     font-weight: 600;
 }
 
-.certificates .btn-secure {
+.comparison-chart .btn-secure {
     background: #8CC152;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.certificates .panel-heading h3{
-    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
-    font-weight: 600;
-}
-
-.certificates th,
-.certificates tr > td:nth-child(4),
-.certificates tr > td:nth-child(5),
-.certificates tr > td:nth-child(6),
-.certificates tr > td:nth-child(7){
+.comparison-chart th,
+.comparison-chart tr > td:nth-child(4),
+.comparison-chart tr > td:nth-child(5),
+.comparison-chart tr > td:nth-child(6),
+.comparison-chart tr > td:nth-child(7){
     text-align: center;
 }
 
@@ -615,13 +612,13 @@ table > tbody > tr > td:nth-child(1) {
         width: 100%;
     }
 
-    .features > div {
+    .features .items > div {
         text-align: center;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .features > div {
+    .features .items > div {
         text-align: left;
     }
 }
