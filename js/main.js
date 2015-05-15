@@ -22,7 +22,7 @@ $(window).resize(function() {
     
     $(".sph").css("min-height", '');
 
-    if ($(window).width() > 768) {
+    if ($(window).width() > 752) {
         var ppheights = $(".pricing-panel").map(function() {
             return $(this).outerHeight();
         }).get();
