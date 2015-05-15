@@ -139,7 +139,7 @@ body {
 }
 
 .hpanel-danger {
-    border: 1px #faa solid !important;
+    border: 1px #ebccd1 solid !important;
 }
 
 .hpanel-success {
@@ -147,8 +147,8 @@ body {
 }
 
 .hpanel-danger .panel-heading {
-    color: #b22;
-    background: #fcc;
+    color: #a94442;
+    background: #f2dede;
 }
 
 .hpanel ul {
@@ -158,6 +158,10 @@ body {
 .hpanel li {
     border-right: none;
     border-left: none;
+}
+
+.hpanel li:first-child {
+    border-top: none;
 }
 /* Navigation */
 
@@ -412,15 +416,6 @@ body {
     padding: 0;
 }
 
-.plans .ucctable {
-    padding: 0;
-    margin: 0;
-}
-
-.plans .ucctable tr > td:last-child {
-    padding-left: 15px;
-}
-
 .plans .btn-secure {
     background: #8CC152;
     border-radius: 5px;
@@ -445,8 +440,6 @@ body {
 
 .features .items > div {
     padding: 10px;
-    /*border-top: 1px solid #ccc;*/
-    
     border-bottom: 1px solid #ccc;
 }
 
@@ -530,7 +523,7 @@ table > tbody > tr > td:nth-child(1) {
     }
     .hpanel .col-sm-4,
     .hpanel .col-sm-5 {
-        border-right: 1px #faa solid !important;
+        border-right: 1px #ebccd1 solid !important;
         padding-right: 0;
     }
     #plans .ucccolumn ul > li:first-child {
