@@ -496,6 +496,13 @@ table > tbody > tr > td:nth-child(1) {
     font-weight: 600;
 }
 
+.certificates h2,
+.products .panel-heading h2,
+.products .panel-heading h3 {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
 .certificates a {
     text-decoration: none;
     color: 0;
@@ -505,6 +512,17 @@ table > tbody > tr > td:nth-child(1) {
     font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
     font-weight: 600;
     font-size: 24px;
+    color: #444;
+}
+
+.certificates .btn-buy {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+}
+
+.comparison-chart .panel-heading h3 {
     color: #444;
 }
 
