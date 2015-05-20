@@ -119,7 +119,7 @@ body {
 .headerBlock {
     text-align: center;
     padding: 50px 0;
-    a font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
     font-weight: 600;
     font-size: 56px;
     color: #444;
