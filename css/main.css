@@ -282,6 +282,10 @@ body {
     padding: 0 !important;
 }
 
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background: none;
+}
+
 .dropdown-menu {
     margin-right: 18px;
     border-radius: 0px;
